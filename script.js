@@ -1,6 +1,14 @@
-// When a user inputs either Rock, Paper, Scissors
-
 // Computer will randomly select Rock, Paper, Scissors
+function getComputerChoice(string) {
+    const randomChoice = Math.floor(Math.random() * string.length);
+    const item = string[randomChoice];
+    return item;
+}
+
+const options = ["Rock","Paper","Scissors"];
+const compResult = getComputerChoice(options);
+
+// When a user inputs either Rock, Paper, Scissors
 
 // If user and computer select same string, then print “Tie. Try Again”
 
