@@ -5,14 +5,38 @@ function getComputerChoice(string) {
     return item;
 }
 
-const options = ["Rock","Paper","Scissors"];
-const compResult = getComputerChoice(options);
+const compOptions = ["Rock","Paper","Scissors"];
+const computerSelection = getComputerChoice(compOptions);
 
 // When a user inputs either Rock, Paper, Scissors
+function getPlayerChoice(selection) {
+    const playerOption = prompt("What is your selection?");
+   if (playerOption === ("Rock" || "Paper" || "Scissors")) {
+    alert("Thanks for your choice");
+   } else {
+    alert("Please enter valid option");
+   }
+}
+
+const playerOptions = ["Rock","Paper","Scissors"];
+//const playerSelection = getPlayerChoice(playerOptions);
+
+function playRound(playerSelection,computerSelection) {
+ if (playerSelection === computerSelection) {
+    return alert("It's a Tie! Try again");
+ } else {
+    return alert("Who won?");
+ }
+}
+
+const playerSelection = "Rock";
+console.log(playRound(playerSelection, computerSelection));
+
+
 
 // If user and computer select same string, then print “Tie. Try Again”
 
-//  user selects Rock and computer selects Paper, print “You lose! Paper beats Rock”
+// If user selects Rock and computer selects Paper, print “You lose! Paper beats Rock”
 
 // If user selects Rock and computer selects Scissors, print “You Win! Rock beats Scissors”
 
