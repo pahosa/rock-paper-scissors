@@ -1,10 +1,23 @@
 // Computer randomly selects Rock, Paper, Scissors
 
+const array = ["Rock","Paper","Scissors"]
 
+function getComputerChoice() {
+    const item = Math.floor(Math.random() * array.length);
+    const compChoice = array[item];
+}
+
+const computerSelection = getComputerChoice()
 
 // User inputs selection of Rock, Paper, Scissors (case insensitive)
+function getPlayerChoice() {
+    const playerChoice = prompt("Choose Rock, Paper, or Scissors");
+    return playerChoice;
+}
 
+const playerSelection = getPlayerChoice()
 
+console.log(playerSelection);
 
 // If user inputs alternative selection or invalid selection, ask to input selection again
 
